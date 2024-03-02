@@ -1,4 +1,6 @@
-package com.in28minutes.rest.webserices.restfulwebservice.entity;
+package com.in28minutes.rest.webserices.restfulwebservice.entity.versioning;
+
+import com.in28minutes.rest.webserices.restfulwebservice.entity.versioning.Name;
 
 public class PersonV2 {
 

@@ -1,8 +1,8 @@
-package com.in28minutes.rest.webserices.restfulwebservice.controller;
+package com.in28minutes.rest.webserices.restfulwebservice.controller.versioning;
 
-import com.in28minutes.rest.webserices.restfulwebservice.entity.Name;
-import com.in28minutes.rest.webserices.restfulwebservice.entity.PersonV1;
-import com.in28minutes.rest.webserices.restfulwebservice.entity.PersonV2;
+import com.in28minutes.rest.webserices.restfulwebservice.entity.versioning.Name;
+import com.in28minutes.rest.webserices.restfulwebservice.entity.versioning.PersonV1;
+import com.in28minutes.rest.webserices.restfulwebservice.entity.versioning.PersonV2;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

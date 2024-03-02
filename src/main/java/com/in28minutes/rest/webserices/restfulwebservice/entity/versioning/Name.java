@@ -1,4 +1,4 @@
-package com.in28minutes.rest.webserices.restfulwebservice.entity;
+package com.in28minutes.rest.webserices.restfulwebservice.entity.versioning;
 
 public class Name {
 
