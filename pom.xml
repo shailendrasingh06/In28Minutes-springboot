@@ -26,6 +26,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-hateoas</artifactId>
+    </dependency>
 <!--For doing de-facto API documentation-->
 <!--        <dependency>-->
 <!--            <groupId>org.springdoc</groupId>-->
@@ -71,7 +76,7 @@
 <!--            <groupId>com.fasterxml.jackson.dataformat</groupId>-->
 <!--            <artifactId>jackson-dataformat-xml</artifactId>-->
 <!--        </dependency>-->
-<!--    </dependencies>-->
+    </dependencies>
 
     <build>
         <plugins>
