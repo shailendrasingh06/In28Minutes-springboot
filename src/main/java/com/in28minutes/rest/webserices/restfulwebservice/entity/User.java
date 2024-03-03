@@ -1,19 +1,18 @@
 package com.in28minutes.rest.webserices.restfulwebservice.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Past;
-import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
+import java.util.List;
 
-@Entity
+@Entity(name = "user_details")
 public class User {
     @Id
-    @Column(name = "id", unique = true)
+    @GeneratedValue
     private Integer id;
 
     @Size(min = 2, message = "Name should have at least 2 characters")
@@ -23,6 +22,10 @@ public class User {
     @Past
     @JsonProperty("date_of_birth")
     private LocalDate birthDate;
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Post> posts;
 
     public User() {
     }
