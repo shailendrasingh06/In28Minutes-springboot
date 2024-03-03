@@ -1,5 +1,6 @@
 package com.in28minutes.rest.webserices.restfulwebservice.controller;
 
+import com.in28minutes.rest.webserices.restfulwebservice.entity.Post;
 import com.in28minutes.rest.webserices.restfulwebservice.entity.User;
 import com.in28minutes.rest.webserices.restfulwebservice.exception.UserNotFoundException;
 import com.in28minutes.rest.webserices.restfulwebservice.repo.UserRepository;
@@ -63,6 +64,16 @@ public class SocialMediaAppJPAController {
     @DeleteMapping("/jpa/users/{id}")
     public void deleteUserById(@PathVariable Integer id) {
          repository.deleteById(id);
+    }
+
+    @GetMapping("/jpa/users/{id}/posts")
+    public List<Post> retreiveUserPosts(@PathVariable Integer id) {
+        Optional<User> user = repository.findById(id);
+
+        if(user.isEmpty())
+            throw new UserNotFoundException("User not found for ID: " + id);
+
+        return user.get().getPosts();
     }
 
 }

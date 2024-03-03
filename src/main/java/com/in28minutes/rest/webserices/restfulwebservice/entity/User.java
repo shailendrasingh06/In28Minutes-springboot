@@ -61,6 +61,13 @@ public class User {
         this.birthDate = dob;
     }
 
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
+    }
 
     @Override
     public String toString() {
