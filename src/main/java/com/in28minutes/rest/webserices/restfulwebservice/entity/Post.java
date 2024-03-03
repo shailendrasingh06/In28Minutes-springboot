@@ -7,7 +7,6 @@ import jakarta.persistence.*;
 public class Post {
 
     @Id
-    @GeneratedValue
     private Integer Id;
 
     private String description;
